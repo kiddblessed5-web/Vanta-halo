@@ -35,3 +35,5 @@ Top picks and "Find the right car" use the 11 supplied car photos (assets/car-*.
 
 Navigation: Home, Inventory (dropdown: All Vehicles, SUVs, Sedans, Hatchbacks, Pickup Trucks, Luxury Cars, Electric & Hybrid, Recently Added), Sell / Trade-In, Financing, Services, About Us, Contact Us. New and used cars are merged into Inventory.
 Palette: #fff, #fafafa, #f1f1f1, #eee, #e5e5e5, #999, #666, #222, #111.
+
+Motion: Lenis smooth scroll + GSAP ScrollTrigger (js/vendor/, js/motion.js). Honors prefers-reduced-motion; if the scripts fail the site scrolls normally.
