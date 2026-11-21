@@ -864,3 +864,37 @@ html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth iframe{pointer-events:none}
 .js.gsap .rv,.js.gsap .rv.in{opacity:0;transform:none;transition:none}
 .js.gsap .hero .rv,.js.gsap .ph .rv{opacity:1;transform:none}
+/* home car filter: white */
+#cars .fpanel{background:#fff;border:1px solid var(--line)}
+#cars .fpanel .sel{border:1px solid var(--line);background-color:#fff}
+
+/* ===== preloader: RPM dashboard ===== */
+html.pre-lock,html.pre-lock body{overflow:hidden}
+.pre{position:fixed;inset:0;z-index:9999;background:#111;color:#fff;font-family:var(--body);animation:preFail .01s 10s forwards}
+.pre-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(20px,3vw,40px)}
+.pre-top,.pre-bot{display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.62)}
+.pre-brand{font-weight:600;letter-spacing:.34em;color:#fff;font-size:15px}
+.pre-msg{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.pre-stage{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,3vh,28px)}
+.pre-dash{position:relative;width:min(520px,78vw,62vh);aspect-ratio:1}
+.pre-dash svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pre-nums text{font:500 17px var(--body)}
+.pre-read{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:56%}
+.pre-count{display:flex;align-items:flex-start;line-height:.85}
+.pre-count b{font-weight:300;font-size:clamp(48px,9vw,92px);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.pre-count i{font-style:normal;font-size:clamp(16px,2.4vw,26px);margin:.35em 0 0 .12em;color:rgba(255,255,255,.62)}
+.pre-unit{font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55);margin-top:8px}.pre-unit em{font-style:normal;color:#fff;font-variant-numeric:tabular-nums}
+.pre-gear{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);display:flex;gap:14px;font:500 14px var(--body);color:rgba(255,255,255,.3)}
+.pre-gear .on{color:#fff}
+.pre-sys{list-style:none;display:flex;gap:clamp(14px,3vw,36px);margin:0;padding:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.pre-sys li{display:flex;align-items:center;gap:8px;transition:color .3s}
+.pre-sys li::before{content:"";width:7px;height:7px;border-radius:50%;border:1px solid rgba(255,255,255,.4);transition:background .3s,border-color .3s,box-shadow .3s}
+.pre-sys li.on{color:#fff}.pre-sys li.on::before{background:#fff;border-color:#fff;box-shadow:0 0 10px rgba(255,255,255,.7)}
+.pre-red .pre-count b{animation:preShake .08s linear infinite}
+@keyframes preShake{50%{transform:translateX(1.5px)}}
+.pre-bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.12)}
+.pre-bar span{display:block;height:100%;background:#fff;transform-origin:0 50%;transform:scaleX(0)}
+.pre-dome{position:absolute;left:-10%;right:-10%;top:calc(100% - 1px);height:12vw;background:#111;border-radius:0 0 50% 50%/0 0 100% 100%;transform-origin:50% 0}
+.pre.pre-out{opacity:0;transition:opacity .5s}
+@keyframes preFail{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media (max-width:600px){.pre-tag{display:none}.pre-sys{font-size:9.5px;letter-spacing:.1em;gap:12px}.pre-nums text{font-size:19px}}

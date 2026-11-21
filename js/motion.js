@@ -16,7 +16,8 @@
   }
 
   /* ---- page load: hero intro ---- */
-  var tl=gsap.timeline({defaults:{ease:'power3.out'}});
+  var tl=gsap.timeline({defaults:{ease:'power3.out'},paused:!!window.__preActive});
+  if(window.__preActive)addEventListener('vanta:ready',function(){tl.play(0);ST.refresh()});
   var hero=$('.hero.hv'),ph=$('.ph');
   if(hero){
     var vid=$('.hvid',hero);
